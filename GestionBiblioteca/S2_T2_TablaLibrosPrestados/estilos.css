@@ -1,0 +1,39 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo del título */
+h1 {
+    text-align: center;
+}
+
+/* Estilo de la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Estilo de las celdas de la tabla */
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* Estilo del encabezado de la tabla */
+thead {
+    background-color: lightgray;
+}
+
+/* Estilo del botón estático de salir */
+#boton-salir {
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: fixed; /* Hacer que el botón sea estático y no se mueva con el scroll */
+    top: 10px; /* Posicionar el botón a 10px del borde superior */
+    right: 10px; /* Posicionar el botón a 10px del borde derecho */
+}
