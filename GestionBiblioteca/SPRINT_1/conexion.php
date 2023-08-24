@@ -1,5 +1,5 @@
 <?php
-	$link = 'mysql:host=localhost; dbname=libreria';
+	$link = 'mysql:host=localhost; dbname=bd_libreria';
 	$user = 'root';
 	$password = '';
 	try{
