@@ -14,7 +14,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         // Obtener los valores de admin y password
         $row = mysqli_fetch_assoc($result);
         $nombre = $row['nombres'];
-        $apellido = $row['apellidos']
+        $apellido = $row['apellidos'];
         $contrasena = $row['contrasena'];
         $nivel=$row['nivel'];
         $cargo=$row['cargo'];
