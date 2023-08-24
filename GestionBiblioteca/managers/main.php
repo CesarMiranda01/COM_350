@@ -9,7 +9,8 @@ echo "<link rel='stylesheet' href='style.css'>";
 echo "<script src='script.js'></script>";
 
 // Define an array of menu items
-$menu_items = array("home", "managers", "empleados", "libros", "links", "about");
+$menu_items = array("HOGAR", "ADMINISTRADORES", "EMPLEADOS", "LIBROS", "ENLACES", "ACERCA DE LA EMPRESA");
+//$menu_files = array("hogar.php","admin.php", "employes.php", "books.php", "links.php", "about.php");
 
 // Create a div element for the menu container
 echo "<div id='menu'>";
