@@ -28,7 +28,7 @@
 			  			<td>".$fila['idLibro']."</td>
 			  			<td>".$fila['titulo']."</td>
 			  			<td>".$fila['autor']."</td>
-			  			<td>".$fila['fechaPrestamo']."</td>
+			  			<td>".$fila['fechaPrestado']."</td>
 		  			</tr>";
 	  		
 	  	}
