@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "login";
+$dbname = "bd_gestionbiblioteca";
 
 // Creamos una conexión usando la función mysqli_connect
 $conn = mysqli_connect($servername, $username, $password, $dbname);
