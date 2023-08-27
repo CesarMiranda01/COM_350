@@ -1,11 +1,9 @@
 <?php
 include 'conexion.php';
-
 // Comprobar si el formulario ha sido enviado
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
     // Consulta para obtener los valores de admin y password
     $query = "SELECT * FROM integrantes WHERE nombres='$username' AND contrasena='$password'";
     $result = mysqli_query($con, $query);
@@ -18,7 +16,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $contrasena = $row['contrasena'];
         $nivel=$row['nivel'];
         $cargo=$row['cargo'];
-        
     } else {
         if(mysqli_num_rows($result) > 1){
         // Mostrar mensaje de alerta
@@ -35,10 +32,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $_SESSION['nombre'] = $nombre;
         $_SESSION['apellido']=$apellido;
         $_SESSION['cargo']=$cargo;
-
-
     // Comprobar si el nombre de usuario y la contraseña son correctos y redirigir a la pagina adecuada.
-    if ($nivel==1) {
+    if ($nivel==1){
         header('location: managers/main.php');
         //echo "ERES UN DAMIN JEJE, tu pagina web pronto sera creada!!";
     } else if ($nivel==2){
@@ -50,4 +45,3 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     }
 }
 ?>
-

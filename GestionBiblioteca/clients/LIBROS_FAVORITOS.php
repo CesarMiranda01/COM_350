@@ -32,7 +32,7 @@
 				<td><form method='post' action='eliminarfavoritos.php'>
 					<input type='hidden' name='idlibro' value='".$fila['idlibro']."'>
 					<input type='submit' name='eliminarfavoritos' value='Eliminar'>
-					</form></td>
+				</form></td>
     			</tr>";
   	}
   	echo "
