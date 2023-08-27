@@ -9,9 +9,7 @@
   <!-- Incluimos el archivo de scripts js -->
   <script src="script.js"></script>
 </head>
-
 <body>
-
   <div class="container">
     <h1>Login y Registrar</h1>
     <!-- Creamos dos botones para mostrar los formularios de login y registrar -->
@@ -24,13 +22,13 @@
     <div id="form-login" style="display: none;">
       <form action="login.php" method="post">
         <div class="form-group">
-          <label for="id">Id:</label>
-          <input type="text" name="id" id="id" required>
+          <label for="idclient">Id:</label>
+          <input type="text" name="idclient" id="idclient" required>
     <!--       <span class="error"><?php echo $error_id; ?></span> -->
         </div>
         <div class="form-group">
-          <label for="pass">Contraseña:</label>
-          <input type="password" name="pass" id="pass" required>
+          <label for="passclient">Contraseña:</label>
+          <input type="password" name="passclient" id="passclient" required>
   <!--         <span class="error"><?php echo $error_pass; ?></span> -->
         </div>
         <div class="form-group">
@@ -44,23 +42,36 @@
     <div id="form-registrar" style="display: none;">
       <form action="login.php" method="post">
         <div class="form-group">
-          <label for="nombre">Nombre:</label>
-          <input type="text" name="nombre" id="nombre" required>
+          <label for="nameclient">Nombres:</label>
+          <input type="text" name="nameclient" id="nameclient" required>
    <!--        <span class="error"><?php echo $error_nombre; ?></span> -->
         </div>
         <div class="form-group">
-          <label for="apellido">Apellido:</label>
-          <input type="text" name="apellido" id="apellido" required>
+          <label for="lastnameclient">Apellidos:</label>
+          <input type="text" name="lastnameclient" id="lastnameclient" required>
 <!--           <span class="error"><?php echo $error_apellido; ?></span> -->
         </div>
         <div class="form-group">
-          <label for="id">Id:</label>
-          <input type="text" name="id" id="id" required>
+          <label for="idclient">Id:</label>
+          <input type="text" name="idclient" id="idclient" required>
 <!--           <span class="error"><?php echo $error_id; ?></span> -->
+          <div id="id_error"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="passclient">Contraseña:</label>
+          <input type="password" name="passclient" id="passclient" required>
+<!--           <span class="error"><?php echo $error_pass; ?></span> -->
+        </div>
+
+        <div class="form-group">
+          <label for="address">Direccion:</label>
+          <input type="text" name="addressclient" id="addressclient" required>
+<!--           <span class="error"><?php echo $error_pass; ?></span> -->
         </div>
         <div class="form-group">
-          <label for="pass">Contraseña:</label>
-          <input type="password" name="pass" id="pass" required>
+          <label for="cellclient">Celular:</label>
+          <input type="number" name="cellclient" id="cellclient" required>
 <!--           <span class="error"><?php echo $error_pass; ?></span> -->
         </div>
         <div class="form-group">
@@ -71,6 +82,5 @@
     </div>
 
   </div>
-
 </body>
 </html>

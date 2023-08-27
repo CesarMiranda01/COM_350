@@ -19,3 +19,7 @@ function mostrarLogin(){
     formRegistrar.style.display = "block";
     formLogin.style.display = "none";
   }
+  function id_error(){
+    var id_error = document.getElementById("id_error");
+    id_error.innerHTML = "El id ya está en uso";
+  }

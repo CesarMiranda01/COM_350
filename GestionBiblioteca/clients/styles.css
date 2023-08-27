@@ -1,0 +1,75 @@
+/* Definimos unos estilos generales para la página */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 10px;
+  }
+  
+  .form-group {
+    margin: 10px;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+  }
+  
+  .error {
+    color: red;
+  }
+  #menu {
+    /* Use flexbox layout to align the items horizontally */
+    display: flex;
+    /* Add some padding and margin */
+    padding: 10px;
+    margin: 10px;
+    /* Add a border and a background color */
+    border: 1px solid black;
+    background-color: rgb(150, 255, 123);
+  }
+  /* Style the links */
+  a {
+    /* Remove the default underline */
+    text-decoration: none;
+    /* Add some padding and margin */
+    padding: 10px;
+    margin: 10px;
+    /* Add a border and a background color */
+    border: 1px solid black;
+    background-color: rgb(246, 255, 198);
+  }
+  /* Style the list items */
+  li {
+    /* Use flexbox layout to make them grow equally */
+    display: flex;
+    flex-grow: 1;
+    /* Align the text in the center */
+    text-align: center;
+  }
+    /* Change the link color on hover */
+    a:hover {
+      color: rgb(14, 236, 22);
+    }
