@@ -1,5 +1,5 @@
 <?php
-	$link = 'mysql:host=localhost; dbname=bd_gestionbilbioteca';
+	$link = 'mysql:host=localhost; dbname=bd_gestionbiblioteca';
 	$user = 'root';
 	$password = '';
 	try{

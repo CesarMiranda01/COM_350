@@ -5,8 +5,8 @@
 	<title></title>
 </head>
 <body>
+  <button  name="botonMostrarLibros" onclick="mostrarLibros();">Mostrar Libros</button>
 	<button  name="botonVerFavoritos" onclick="mostrarFavoritos();">Mostrar Favoritos</button>
-	<button  name="botonMostrarLibros" onclick="mostrarLibros();">Mostrar Libros</button>
 	<button  name="librosPrestados" onclick="librosPrestados();">Libros Prestados</button><br><br>
 	<div id="contenedorLista">
 		

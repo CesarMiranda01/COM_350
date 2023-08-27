@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
 	<?php 
 		include('conexion.php');
 		$consulta = $pdo->prepare("SELECT * FROM libros");
@@ -35,12 +29,8 @@
 	  			
 	  			</tr>";
 	  		}
-	  		
 	  	}
 	  	echo "
 	  			</table>
 	  		";
-
 	 ?>
-</body>
-</html>
