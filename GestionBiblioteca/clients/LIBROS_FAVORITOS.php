@@ -19,6 +19,7 @@
 			  <th>Editorial</th>
 			  <th>Edicion</th>
 			  <th>Autor</th>
+			  <th>Eliminar</th>
   		";
   	while (($fila = $consulta->fetch())) {
   		echo "
@@ -28,10 +29,13 @@
 				<td style='color: green'>".$fila['editorial']."</td>
 	  			<td style='color: green'>".$fila['edicion']."</td>
 	  			<td style='color: green'>".$fila['autor']."</td>
+				<td><form method='post' action='eliminarfavoritos.php'>
+					<input type='hidden' name='idlibro' value='".$fila['idlibro']."'>
+					<input type='submit' name='eliminarfavoritos' value='Eliminar'>
+					</form></td>
     			</tr>";
   	}
   	echo "
   			</table>
   		";
-
  ?>
