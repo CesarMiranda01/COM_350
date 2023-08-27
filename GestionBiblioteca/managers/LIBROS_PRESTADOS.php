@@ -21,12 +21,10 @@
 			  			<td>".$fila['autor']."</td>
 			  			<td>".$fila['fecha_prestado']."</td>
 		  			</tr>";
-	  		
 	  	}
 	  	echo "
 	  			</table><br>
 	  			<span>Total libros: ".$cuentaTotal."<br>
 	  			<span>Total libros prestados: ".$cuentaPrestados."
 	  		";
-
 	 ?>
