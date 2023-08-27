@@ -16,5 +16,6 @@ function mostrarLogin(){
     var formRegistrar = document.getElementById("form-registrar");
     
     // Cambiamos el estilo de display de los elementos
+    formRegistrar.style.display = "block";
     formLogin.style.display = "none";
   }
