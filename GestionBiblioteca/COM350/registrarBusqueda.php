@@ -28,9 +28,7 @@ if($elemHistorial!==null){
         mysqli_query($con, $sql); 
     }
 }
-
 ?>
-
 <p>se inserto con exito</p>
 
 
