@@ -42,7 +42,7 @@ table.tablaBusqueda{
 }
 table.tablaBusqueda th {
   border: 1px solid black;
-  width: 33%;
+  width: 25%;
   height: 45px;
   text-align: center;
   background-color: rgb(69, 69, 69);
@@ -50,7 +50,7 @@ table.tablaBusqueda th {
  }
  table.tablaBusqueda td {
   border: 1px solid black;
-  width: 33%;
+  width: 25%;
   height: 40px;
   text-align: left;
  }

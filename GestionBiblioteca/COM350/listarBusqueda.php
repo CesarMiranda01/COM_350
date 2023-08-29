@@ -13,24 +13,32 @@
     ?>
     <th>busquedas</th>
     <th>NroBusquedas</th>
-    <th>disponibilidad</th>
+    <th>Disponibilidad</th>
+    <th>Resultado</th>
     <?php
     
 
 
 
-    $sql = "SELECT id,busqueda,nroBusquedas,estado from busquedas";
+    $sqlbusq = "SELECT busquedas,numerobusquedas,estado from busqueda";
+    $sqlres = "SELECT busqueda.busquedas,libros.titulo from busqueda INNER JOIN libros ON busqueda.idlibro=libros.idlibro";
 
-    $consulta = mysqli_query($con, $sql);
-    while ($fila = mysqli_fetch_array($consulta)) {
+    $conb = mysqli_query($con, $sqlbusq);
+    
+    while ($fila = mysqli_fetch_array($conb)) {
         if($fila["estado"]==0){$disponibilidad="No";}
         else{$disponibilidad="Si";}
     ?>
         <tr>
-            <td><?php echo $fila["busqueda"] ?></td>
-            <td><?php echo $fila["nroBusquedas"] ?></td>
+            <td><?php echo $fila["busquedas"] ?></td>
+            <td><?php echo $fila["numerobusquedas"] ?></td>
             <td><?php echo $disponibilidad?></td>
-
+            <td><?php 
+            $conr=mysqli_query($con, $sqlres);
+            while($match=mysqli_fetch_array($conr)){
+                if($fila["busquedas"]==$match["titulo"]){echo $match["titulo"];}else{echo "";}
+             } ?>
+            </td>
         </tr>
     <?php } ?>
     </table>
