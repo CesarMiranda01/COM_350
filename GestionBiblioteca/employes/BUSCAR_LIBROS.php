@@ -1,3 +1,22 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<script src="funciones.js"></script>
+	<body>
+	<div class="marco">
+        <div class="headTop">
+            <input class="barraBusqueda" type="text" id="buscador" placeholder="buscar....">
+            <button class="boton" onclick="enviarbusqueda()">Buscar</button>
+        </div>
+        <br>
+    </div>
+	</body>
+	</html>
+	
 	<?php 
 		include('../clients/conexion.php');
 		$consulta = $pdo->prepare("SELECT * FROM libros");

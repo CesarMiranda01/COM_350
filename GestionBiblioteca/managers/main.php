@@ -9,7 +9,7 @@ echo "<link rel='stylesheet' href='style.css'>";
 echo "<script src='script.js'></script>";
 
 // Define an array of menu items
-$menu_items = array("HOGAR", "ADMINISTRADORES", "EMPLEADOS", "VER_LIBROS", "LIBROS_PRESTADOS", "ACERCA DE LA EMPRESA");
+$menu_items = array("HOGAR", "ADMINISTRADORES", "EMPLEADOS", "VER_LIBROS", "LIBROS_PRESTADOS", "ACERCA DE NOSOTROS");
 //$menu_files = array("hogar.php","admin.php", "employes.php", "books.php", "links.php", "about.php");
 
 // Create a div element for the menu container
@@ -20,7 +20,6 @@ foreach ($menu_items as $item) {
   // Create a list item element with a link to the corresponding page
   echo "<li><a href='$item.php'>$item</a></li>";
 }
-
 // Close the div element for the menu container
 echo "</div>";
 ?>
