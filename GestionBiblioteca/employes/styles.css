@@ -1,0 +1,56 @@
+.marco{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    width: 65%;
+    justify-content: space-between;
+}
+.headTop{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.barraBusqueda{
+    display: flex;
+    background-color: rgb(180, 180, 180);
+    border: 2px gray solid;
+    color: rgb(90, 90, 90);
+    font-style: italic;
+    align-content: start;
+    width: 77%;
+    
+    padding: 6px;
+}
+.boton{
+    display: flex;
+    background-color: rgb(58, 58, 58);
+    border: 2px gray solid;
+    color: rgb(255, 255, 255) ;
+    align-content: center;
+    width: 17%;
+    
+    padding: 6px;
+}
+table.tablaBusqueda{
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    width: 100%;
+}
+table.tablaBusqueda th {
+  border: 1px solid black;
+  width: 25%;
+  height: 45px;
+  text-align: center;
+  background-color: rgb(69, 69, 69);
+  color: white;
+ }
+ table.tablaBusqueda td {
+  border: 1px solid black;
+  width: 25%;
+  height: 40px;
+  text-align: left;
+ }

@@ -41,7 +41,7 @@ echo "<script src='script.js'></script>";
 echo "    <h1>BIBLIOTECA VIRTUAL</h1>";
 echo $nameclient . " " . $lastnameclient;
 // Define an array of menu items
-$menu_items = array("BUSCAR_LIBROS", "LIBROS_FAVORITOS", "OPCION1", "OPCION2", "OPCION3");
+$menu_items = array("BUSCAR_LIBROS", "LIBROS_FAVORITOS", "BUSQUEDAS", "OPCION2", "OPCION3");
 //$menu_files = array("hogar.php","admin.php", "employes.php", "books.php", "links.php", "about.php");
 
 // Create a div element for the menu container

@@ -9,7 +9,7 @@ echo "<link rel='stylesheet' href='style.css'>";
 echo "<script src='script.js'></script>";
 
 // Define an array of menu items
-$menu_items = array("LIBROS", "LIBROS_PRESTADOS", "OPCION1", "OPCION2", "OPCION3");
+$menu_items = array("BUSCAR_LIBROS", "LIBROS_PRESTADOS", "BUSQUEDAS", "INFORMES", "CUENTAS");
 //$menu_files = array("hogar.php","admin.php", "employes.php", "books.php", "links.php", "about.php");
 
 // Create a div element for the menu container
