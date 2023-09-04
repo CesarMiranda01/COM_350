@@ -8,8 +8,9 @@ echo "<link rel='stylesheet' href='style.css'>";
 // Include the JavaScript file for interactivity
 echo "<script src='script.js'></script>";
 
+echo "    <h3>ADMINISTRADOR</h3>";
 // Define an array of menu items
-$menu_items = array("HOGAR", "ADMINISTRADORES", "EMPLEADOS", "VER_LIBROS", "LIBROS_PRESTADOS", "ACERCA DE NOSOTROS");
+$menu_items = array("HOGAR", "ADMINISTRADORES", "EMPLEADOS", "VER_LIBROS", "LIBROS_PRESTADOS", "CLIENTES");
 //$menu_files = array("hogar.php","admin.php", "employes.php", "books.php", "links.php", "about.php");
 
 // Create a div element for the menu container

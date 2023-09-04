@@ -1,11 +1,58 @@
+/* Establecer el color de fondo y la fuente del cuerpo */
 body {
+    background-color: #f0f0f0;
     font-family: Arial, sans-serif;
-}
-
-form {
-    margin: 20px;
-}
-
-.error {
-    color: red;
-}
+  }
+  
+  /* Centrar el formulario y darle un ancho máximo */
+  form {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  /* Establecer el color de fondo, el borde y el relleno del formulario */
+  form {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+  }
+  
+  /* Establecer el color, el tamaño y el alineamiento del título */
+  h1 {
+    color: #ff0000; /* rojo */
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  /* Establecer el color, el tamaño y el alineamiento del subtítulo */
+  h4 {
+    color: #00ff00; /* verde */
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  /* Establecer el estilo de las etiquetas */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Establecer el estilo de los campos de entrada */
+  input {
+    display: block;
+    width: 100%;
+    border: 1px solid #cccccc;
+    padding: 5px;
+  }
+  
+  /* Establecer el estilo del botón de envío */
+  button {
+    display: block;
+    width: 100%;
+    background-color: #0000ff; /* azul */
+    color: #ffffff; /* blanco */
+    border: none;
+    padding: 10px;
+  }
+  

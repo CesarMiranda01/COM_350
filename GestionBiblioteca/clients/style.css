@@ -1,0 +1,84 @@
+/* Establecer el color de fondo y la fuente del cuerpo */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Establecer el estilo del contenedor */
+  .container {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  /* Establecer el color, el tamaño y el alineamiento del título principal */
+  h1 {
+    color: #ff6600; /* naranja */
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  /* Establecer el estilo de los botones */
+  .botones {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  /* Establecer los colores de los botones según su estado */
+  #btn-login {
+    background-color: #00cc00; /* verde claro */
+  }
+  
+  #btn-login:hover {
+    background-color: #009900; /* verde oscuro */
+  }
+  
+  #btn-registrar {
+    background-color: #0066ff; /* azul claro */
+  }
+  
+  #btn-registrar:hover {
+    background-color: #0033cc; /* azul oscuro */
+  }
+  
+  /* Establecer el estilo de los formularios */
+  form {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+  }
+  
+  /* Establecer el estilo de los grupos de formulario */
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  /* Establecer el estilo de las etiquetas */
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  /* Establecer el estilo de los campos de entrada */
+  input {
+    display: block;
+    width: 100%;
+    border: 1px solid #cccccc;
+    padding: 5px;
+  }
+  
+  /* Establecer el estilo de los botones de envío */
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #ff0000; /* rojo */
+    color: #ffffff; /* blanco */
+  }
+  

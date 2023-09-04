@@ -7,7 +7,7 @@ echo "<link rel='stylesheet' href='style.css'>";
 
 // Include the JavaScript file for interactivity
 echo "<script src='script.js'></script>";
-
+echo "    <h3>ENCARGADO</h3>";
 // Define an array of menu items
 $menu_items = array("BUSCAR_LIBROS", "LIBROS_PRESTADOS", "BUSQUEDAS", "INFORMES", "CUENTAS");
 //$menu_files = array("hogar.php","admin.php", "employes.php", "books.php", "links.php", "about.php");
