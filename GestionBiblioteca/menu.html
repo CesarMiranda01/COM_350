@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Menú de navegación</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+          <li><a href="#" onclick="cargarContenido('home.html')">Home</a></li>
+          <li><a href="#" onclick="cargarContenido('administradores.html')">Administradores</a></li>
+          <li><a href="#" onclick="cargarContenido('empleados.html')">Empleados</a></li>
+          <li><a href="#" onclick="cargarContenido('libros.html')">Libros</a></li>
+          <li><a href="#" onclick="cargarContenido('clientes.html')">Clientes</a></li>
+        </ul>
+      </div>
+      
+      <div id="contenedor">
+        <!-- Aquí se cargará el contenido con AJAX -->
+      </div>
+      
+      <div id="barra">
+        <ul>
+          <li><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a></li>
+          <li><a href="https://www.whatsapp.com"><img src="whatsapp.png" alt="WhatsApp"></a></li>
+          <li><a href="https://www.tiktok.com"><img src="tiktok.png" alt="TikTok"></a></li>
+        </ul>
+      </div>
+      
+      <script>
+        // Esta función usa AJAX para reemplazar el contenido del div con id contenedor
+        function cargarContenido(url) {
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", url, true);
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              document.getElementById("contenedor").innerHTML = xhr.responseText;
+            }
+          };
+          xhr.send();
+        }
+      </script>
+      
+
+</body>
+</html>
