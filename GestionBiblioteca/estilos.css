@@ -7,7 +7,7 @@
   
   /* Estilos del menú */
   #menu {
-    background-image: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background-image: linear-gradient(to right, #ed585d, #98fff5);
     width: 100%;
   }
   
@@ -22,7 +22,7 @@
   }
   
   #menu ul li a {
-    color: white;
+    color: rgb(36, 18, 129);
     text-decoration: none;
     font-weight: bold;
   }
@@ -35,12 +35,12 @@
   #contenedor {
     margin: 20px;
     padding: 20px;
-    border: 1px solid #fad0c4;
+    border: 1px solid #f9e0fb;
   }
   
   /* Estilos de la barra */
   #barra {
-    background-image: linear-gradient(to right, #fad0c4, #ff9a9e);
+    background-image: linear-gradient(to right, #ffeca1, #c9ff7d);
     width: 100%;
     position: fixed;
     bottom: 0;

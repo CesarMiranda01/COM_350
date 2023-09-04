@@ -1,0 +1,36 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilos del título */
+  h1 {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  /* Estilos de la tabla */
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Estilos de las celdas */
+  td, th {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  /* Estilos de las cabeceras */
+  th {
+    background-color: #eee;
+  }
+  
+  /* Estilos de las filas alternas */
+  tr:nth-child(even) {
+    background-color: #f0f0f0;
+  }
+  
