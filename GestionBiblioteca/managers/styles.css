@@ -1,0 +1,32 @@
+/* Se define el estilo general de la tabla */
+table {
+    border-collapse: collapse; /* Se eliminan los espacios entre las celdas */
+    width: 80%; /* Se establece el ancho de la tabla */
+    margin: 20px auto; /* Se centra la tabla en la página */
+  }
+  
+  /* Se define el estilo de las celdas de la tabla */
+  td, th {
+    border: 1px solid #dddddd; /* Se añade un borde a las celdas */
+    text-align: left; /* Se alinea el texto a la izquierda */
+    padding: 8px; /* Se añade un relleno a las celdas */
+  }
+  
+  /* Se define el estilo de la cabecera de la tabla */
+  thead {
+    background-color: #4CAF50; /* Se cambia el color de fondo de la cabecera */
+    color: white; /* Se cambia el color del texto de la cabecera */
+  }
+  
+  /* Se define el estilo de las filas pares de la tabla */
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Se cambia el color de fondo de las filas pares */
+  }
+  
+  /* Se define el estilo del mensaje cuando no hay clientes registrados */
+  p {
+    text-align: center; /* Se centra el texto en la página */
+    font-weight: bold; /* Se pone el texto en negrita */
+    color: red; /* Se cambia el color del texto a rojo */
+  }
+  

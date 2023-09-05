@@ -18,7 +18,7 @@ Estilos generales
   }
   
   #menu ul li {
-    padding: 15px;
+    padding: 10px;
   }
   
   #menu ul li a {
@@ -42,8 +42,8 @@ Estilos generales
   #barra {
     background-image: linear-gradient(to right, #ffeca1, #c9ff7d);
     width: 100%;
-    /* position: fixed;
-    bottom: 0; */
+    /* position: fixed; */
+    bottom: 0;
   }
   
   #barra ul {
@@ -58,6 +58,7 @@ Estilos generales
   
   #barra ul li a {
     display: block;
+    text-decoration: none;
   }
   
   #barra ul li a img {

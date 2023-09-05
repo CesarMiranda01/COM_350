@@ -81,4 +81,6 @@ body {
     background-color: #ff0000; /* rojo */
     color: #ffffff; /* blanco */
   }
-  
+  #formulario{
+    box-shadow: 0px 0px 500px #000;
+  }

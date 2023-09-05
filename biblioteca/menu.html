@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menú con login</title>
+  <!-- Aquí se incluyen los archivos estilos.css y script.js -->
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js"></script>
+</head>
+<body bgcolor="yellow">
+  <!-- Aquí se crea la barra estática de los enlaces -->
+  <div id="barra">
+    <ul>
+      <li><a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"><i class="fa-brands fa-youtube"></i></a></li>
+      <li><a href="https://www.whatsapp.com"><img src="whatsapp.png" alt="WhatsApp"></a></li>
+      <li><a href="https://www.tiktok.com"><img src="tiktok.png" alt="TikTok"></a></li>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </ul>
+  </div>
+
+  <!-- Aquí se crea el menú con los botones -->
+  <div id="menu">
+    <ul>
+      <li><a href="#" onclick="cargarContenido('home.html')">Home</a></li>
+      <li><a href="#" onclick="cargarContenido('administradores.html')">Administradores</a></li>
+      <li><a href="#" onclick="cargarContenido('empleados.html')">Empleados</a></li>
+      <li><a href="#" onclick="cargarContenido('libros.html')">Libros</a></li>
+      <li><a href="#" onclick="cargarContenido('clientes.html')">Clientes</a></li>
+    </ul>
+  </div>
+
+  <!-- Aquí se crea el contenedor donde se cargará el contenido con AJAX -->
+  <div id="contenedor">
+    <!-- Aquí se cargará el contenido con AJAX -->
+  </div>
+
+  <!-- Aquí se crea el formulario de login que se mostrará encima de todo -->
+  <div id="login">
+    <form action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  
+</body>
+</html>
