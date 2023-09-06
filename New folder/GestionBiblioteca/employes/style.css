@@ -1,0 +1,41 @@
+/* This is the CSS file for a manager user */
+/* It styles the horizontal menu with the options: home, managers, empleados, libros, links and about */
+
+/* Style the menu container */
+#menu {
+    /* Use flexbox layout to align the items horizontally */
+    display: flex;
+    /* Add some padding and margin */
+    padding: 10px;
+    margin: 10px;
+    /* Add a border and a background color */
+    border: 1px solid black;
+    background-color: rgb(255, 206, 99);
+  }
+  
+  /* Style the list items */
+  li {
+    /* Use flexbox layout to make them grow equally */
+    display: flex;
+    flex-grow: 1;
+    /* Align the text in the center */
+    text-align: center;
+  }
+  
+  /* Style the links */
+  a {
+    /* Remove the default underline */
+    text-decoration: none;
+    /* Add some padding and margin */
+    padding: 10px;
+    margin: 10px;
+    /* Add a border and a background color */
+    border: 1px solid black;
+    background-color: white;
+  }
+  
+  /* Change the link color on hover */
+  a:hover {
+    color: blue;
+  }
+  

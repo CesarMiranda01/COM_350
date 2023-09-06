@@ -1,0 +1,135 @@
+/* Definimos unos estilos generales para la página */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .botones {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 10px;
+  }
+  
+  .form-group {
+    margin: 10px;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+  }
+  
+  .error {
+    color: red;
+  }
+  #menu {
+    /* Use flexbox layout to align the items horizontally */
+    display: flex;
+    /* Add some padding and margin */
+    padding: 10px;
+    margin: 10px;
+    /* Add a border and a background color */
+    border: 1px solid black;
+    background-color: rgb(150, 255, 123);
+  }
+  /* Style the links */
+  a {
+    /* Remove the default underline */
+    text-decoration: none;
+    /* Add some padding and margin */
+    padding: 10px;
+    margin: 10px;
+    /* Add a border and a background color */
+    /*border: 1px solid black;
+    background-color: rgb(246, 255, 198);*/
+  }
+  /* Style the list items */
+  li {
+    /* Use flexbox layout to make them grow equally */
+    display: flex;
+    flex-grow: 1;
+    /* Align the text in the center */
+    text-align: center;
+  }
+    /* Change the link color on hover */
+    a:hover {
+      color: rgb(14, 236, 22);
+    }
+
+
+/*meoooo*/
+
+.marco{
+  display: flex;
+  flex-flow: column wrap;
+  margin: 0 auto;
+  width: 65%;
+  justify-content: space-between;
+}
+.headTop{
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 auto;
+  width: 100%;
+  height: 30px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.barraBusqueda{
+  display: flex;
+  background-color: rgb(180, 180, 180);
+  border: 2px gray solid;
+  color: rgb(90, 90, 90);
+  font-style: italic;
+  align-content: start;
+  width: 77%;
+  
+  padding: 6px;
+}
+.boton{
+  display: flex;
+  background-color: rgb(58, 58, 58);
+  border: 2px gray solid;
+  color: rgb(255, 255, 255) ;
+  align-content: center;
+  width: 17%;
+  margin: 0;
+  padding: 6px;
+}
+table.tablaBusqueda{
+  border: 2px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+  width: 100%;
+}
+table.tablaBusqueda th {
+border: 1px solid black;
+width: 25%;
+height: 45px;
+text-align: center;
+background-color: rgb(69, 69, 69);
+color: white;
+}
+table.tablaBusqueda td {
+border: 1px solid black;
+width: 25%;
+height: 40px;
+text-align: left;
+}
