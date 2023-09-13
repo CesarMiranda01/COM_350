@@ -9,7 +9,7 @@
 </html>
 <?php 
 		include('conexion.php');
-		$consulta = $pdo->prepare("SELECT * FROM libro r INNER JOIN librosprestados l WHERE r.idlibro = l.idlibro AND prestado = 1");
+		$consulta = $pdo->prepare("SELECT * FROM libro r INNER JOIN libroprestado l WHERE r.idlibro = l.idlibro AND prestado = 1");
 	  	$consulta->execute();
 	  	$consulta1 = $pdo->prepare("SELECT * FROM libro");
 	  	$consulta1->execute();

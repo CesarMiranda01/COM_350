@@ -1,19 +1,19 @@
-// Esta función usa AJAX para reemplazar el contenido del div con id contenedor
-function cargarContenido(url) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState == 4 && xhr.status == 200) {
-        document.getElementById("contenedor").innerHTML = xhr.responseText;
+function loginUser() {
+  // Aquí puedes realizar validaciones adicionales antes de enviar el formulario
+  return true;
+}
+document.addEventListener("DOMContentLoaded", function() {
+  // Recuperar el tipo de usuario de la sesión PHP
+  // <?php session_start(); ?>
+  var userType = "<?php echo isset($_SESSION['userType']) ? $_SESSION['userType'] : 'guest'; ?>";
+  // Habilitar o deshabilitar enlaces de menú según el tipo de usuario
+  var menuItems = document.querySelectorAll(".menu a");
+  for (var i = 0; i < menuItems.length; i++) {
+      var menuItem = menuItems[i];
+      if (menuItem.id.startsWith(userType)) {
+          menuItem.style.pointerEvents = "auto";
+      } else {
+          menuItem.style.pointerEvents = "none";
       }
-    };
-    xhr.send();
   }
-  
-  // Esta función usa un evento para detectar cuando la página se ha cargado completamente
-  window.addEventListener("load", function() {
-    // Aquí se llama a la función cargarContenido con el archivo home.html como parámetro
-    // para que se muestre el contenido inicial
-    cargarContenido("home.html");
-  });
-  
+});
