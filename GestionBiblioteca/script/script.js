@@ -83,8 +83,6 @@ function librosPrestados() {
 	ajax.send();
 }
 
-
-
 function enviarbusqueda() {
 	var valBusqueda = document.getElementById('buscador').value;
 	console.log(valBusqueda);
@@ -115,3 +113,28 @@ function generarListaBusqueda() {
 function prueba(){
     window.location.href = "prueba.html";
 }
+function clientes() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("contenedor").innerHTML = xhr.responseText;
+        }
+    };
+
+    xhr.open("GET", "php/clientes.php", true);
+    xhr.send();
+}
+function pendientes() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("contenedor").innerHTML = xhr.responseText;
+        }
+    };
+
+    xhr.open("GET", "php/prestamos.php", true);
+    xhr.send();
+}
+

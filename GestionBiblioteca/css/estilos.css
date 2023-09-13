@@ -128,3 +128,35 @@ table.tablaBusqueda td {
     height: 40px;
     text-align: left;
 }
+
+/* menu estatico */
+/* Estilos para el menú superior */
+/* Estilos para el menú superior */
+#menuSuperior {
+    background-color: #001f49;
+    color: white;
+    text-align: right;
+    padding: 10px;
+}
+
+#menuSuperior ul {
+    list-style-type: none; /* Quitar el punto */
+    padding: 0;
+    margin: 0;
+}
+
+#menuSuperior li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#menuSuperior a {
+    text-decoration: none; /* Quitar el subrayado */
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#menuSuperior a:hover {
+    color: red;
+}

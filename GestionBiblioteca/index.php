@@ -8,19 +8,31 @@
 	<title></title>
 </head>
 <body >
+	<!-- Agrega el nuevo menú estático -->
+<nav id="menuSuperior">
+    <ul>
+        <li><a href="#">Contactanos</a></li>
+        <li><a href="#">Ayuda</a></li>
+        <li><a href="#">Asistencia</a></li>
+		<li><a href="#">gmail</a></li>
+    </ul>
+</nav>
 	<header>
 		<div>
 			<img src="imagenes/logo.png">
 		</div>
 		<ul id="menuCabecera">
-      <li><a href="#" onclick="mostrarFavoritos();" id="botonFavoritos">Favoritos</a></li>
+		<!-- sprint4 -->
+      <li><a href="#" onclick="clientes();" id="botonFavoritos">Clientes</a></li>
       <li><a href="#" onclick="mostrarLibros();" id="botonFavoritos">Libros</a></li>
-      <li><a href="#" onclick="librosPrestados();" id="botonFavoritos">Libros Prestados</a></li>
-
+      <li><a href="#" onclick="librosPrestados();" id="botonFavoritos">Prestados</a></li>
       <li><a href="#" onclick="mostrarFavoritos();" id="botonFavoritos">Contar Libros</a></li>
-      <li><a href="#" onclick="mostrarLibros();" id="botonFavoritos">Sprint5</a></li>
-      <li><a href="#" onclick="librosPrestados();" id="botonFavoritos">Sprint6</a></li>
-      <li><a href="#" onclick="mostrarFavoritos();" id="botonFavoritos">sprint7</a></li>
+
+      <li><a href="#" onclick="mostrarLibros();" id="botonFavoritos">Prestamos</a></li>
+	  <!-- sprint4 -->
+	  <li><a href="#" onclick="pendientes();" id="botonFavoritos">Pendientes</a></li>
+      <li><a href="#" onclick="librosPrestados();" id="botonFavoritos">Cerrar Sesion</a></li>
+      <li><a href="#" onclick="mostrarFavoritos();" id="botonFavoritos">&nbsp</a></li>
 		</ul>
 	</header><br>
 	<?php 
@@ -41,13 +53,16 @@
 	} else {
 		?>
 		<div class="marco">
-			<div class="headTop">
+
+			<div id="contenedor">
+				<div id="contenedor1"></div>
+				<div id="contenedor2">
+				<div class="headTop">
 				<input class="barraBusqueda" type="text" id="buscador" placeholder="buscar....">
 				<button class="boton" onclick="enviarbusqueda()">Buscar</button>
 				<button class="boton" onclick="generarListaBusqueda()">Generar Lista de Busquedas</button>
 			</div>
-			<div id="contenedorLista">
-
+				</div>
 			</div>
 		</div>
 		<?php
