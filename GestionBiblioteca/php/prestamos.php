@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/styless.css">
 <?php 
-        include("conexion.php");
+        include("conexion1.php");
         $consulta = $pdo->prepare("SELECT p.nombres, p.apellidos, p.ci, p.edad, p.email, e.idLibro, l.titulo FROM persona p INNER JOIN libroprestado e ON p.ci = e.ci INNER JOIN libro l ON e.idLibro=l.idLibro");
         $consulta->execute();
 	  	echo "

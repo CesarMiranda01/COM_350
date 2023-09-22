@@ -1,6 +1,6 @@
 <?php 
 		include('conexion.php');
-		$consulta = $pdo->prepare("SELECT l.titulo, l.idlibro, l.autor, p.fecha_prestamo, p.fecha_entrega, c.nombres FROM libros l INNER JOIN libros_prestados p ON l.idlibro = p.idlibro INNER JOIN clientes c ON p.idcliente = c.idcliente WHERE l.prestado = 1");
+		$consulta = $pdo->prepare("SELECT l.titulo, l.idlibro, l.autor, p.fecha_prestamo, p.fecha_entrega, c.nombres FROM libros l INNER JOIN libroprestado p ON l.idlibro = p.idlibro INNER JOIN persona c ON p.idcliente = c.idcliente WHERE l.prestado = 1");
 	  	$consulta->execute();
 	  	$consulta1 = $pdo->prepare("SELECT * FROM libros");
 	  	$consulta1->execute();
