@@ -8,26 +8,39 @@ package pregunta5;
  *
  * @author msi Katana GF76
  */
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import modelo.Ciudadano;
+import persistencia.CiudadanoRepositorio;
 
-public class pregunta5 {
 
-    public static void main(String[] args) throws ParseException {
-        CiudadanoRepositorio repositorio = // Inicializar el repositorio (puede ser mediante inyección de dependencias)
-        CiudadanoServicio servicio = new CiudadanoServicio(repositorio);
+public class Pregunta5 {
 
-        // Datos de ejemplo
-        int ci = 1234567;
-        String nombres = "Juan";
-        String apellidos = "Perez";
-        String fechaString = "1990-01-01"; // Formato yyyy-MM-dd
-        Date fecha = new SimpleDateFormat("yyyy-MM-dd").parse(fechaString);
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MiUnidadDePersistencia");
+        EntityManager em = emf.createEntityManager();
 
-        // Insertar ciudadano
-        servicio.insertarCiudadano(ci, nombres, apellidos, fecha);
+        CiudadanoRepositorio repositorio = new CiudadanoRepositorio();
+        repositorio.setEntityManager(em);
 
-        System.out.println("Ciudadano insertado correctamente.");
+        // Crear un nuevo ciudadano
+        Ciudadano nuevoCiudadano = new Ciudadano();
+        nuevoCiudadano.setCi(123456);
+        nuevoCiudadano.setNombres("John");
+        nuevoCiudadano.setApellidos("Doe");
+        nuevoCiudadano.setFecha(new Date());
+
+        // Insertar en la base de datos
+        repositorio.insertarCiudadano(nuevoCiudadano);
+
+        em.close();
+        emf.close();
     }
+    
 }

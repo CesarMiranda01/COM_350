@@ -1,68 +1,99 @@
 import pandas as pd
 import mysql.connector
 from datetime import datetime
+import os
+
+# Obtener la ruta absoluta del directorio actual
+current_directory = os.path.abspath(os.path.dirname(__file__))
+
+# Construir la ruta completa al archivo ciudadanos.csv
+filename = os.path.join(current_directory, 'ciudadanos.csv')
+print(f"La ruta completa del archivo es: {filename}")
+
+data = pd.read_csv(filename, delimiter='.')
+
+if os.path.exists(filename):
+    print(f"El archivo {filename} SI existe.")
+else:
+    print(f"El archivo {filename} no existe.")
+data.info()
+data.shape
+print(data)
 
 # Método para filtrar nombres y apellidos sin números
-def filtrar_nombres_apellidos(ciudadanos):
-    ciudadanos = ciudadanos[ciudadanos.apply(lambda x: x.str.isalpha(), axis=1)]
-    return ciudadanos
+def filtrar_nombres_apellidos(data):
+    for col in ['nombre1', 'nombre2', 'paterno', 'materno']:
+        data[col] = data[col].str.replace('\d+', '', regex=True)
+    return data
+
+
+# Método para eliminar letras en el CI
+def filtrar_ci(data):
+    data['ci'] = data['ci'].str.replace('[a-zA-Z]', '', regex=True)
+    return data
 
 # Método para unir nombres
-def unir_nombres(ciudadanos):
-    ciudadanos['nombres'] = ciudadanos['nombre1'] + ' ' + ciudadanos['nombre2']
-    return ciudadanos
+def unir_nombres(data):
+    data['nombres'] = data['nombre1'] + ' ' + data['nombre2']
+    return data
 
-# Método para convertir la fecha al formato yyyy-mm-dd
-def convertir_fecha(ciudadanos):
-    ciudadanos['fecha'] = ciudadanos['fecha'].apply(lambda x: datetime.strptime(x, '%d/%m/%Y').strftime('%Y-%m-%d'))
-    return ciudadanos
+# Método para convertir fecha al formato yyyy-mm-dd
+def convertir_fecha(data):
+    data['fecha'] = pd.to_datetime(data['fecha'], format='%d/%m/%Y').dt.strftime('%Y-%m-%d')
+    return data
 
-# Método para guardar en la base de datos
-def guardar_en_bd(ciudadanos):
+# Método para guardar en la base de datos MySQL
+def guardar_en_mysql(data):
+    # Conexión a la base de datos MySQL (reemplaza los valores con los de tu configuración)
     conn = mysql.connector.connect(
         host='localhost',
         user='tu_usuario',
         password='tu_contraseña',
-        database='tu_base_de_datos'
+        database='bd_personas'
     )
-    
+
+    # Crear un cursor
     cursor = conn.cursor()
 
     # Crear la tabla si no existe
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS ciudadano (
-            ci INT PRIMARY KEY,
+            ci INT,
             nombres VARCHAR(30),
             apellidos VARCHAR(45),
             fecha DATE
         )
     ''')
 
-    # Insertar los datos en la tabla
-    for index, row in ciudadanos.iterrows():
+    # Insertar datos en la tabla
+    for _, row in data.iterrows():
         cursor.execute('''
             INSERT INTO ciudadano (ci, nombres, apellidos, fecha)
             VALUES (%s, %s, %s, %s)
-        ''', (row['ci'], row['nombres'], row['paterno'] + ' ' + row['mate'], row['fecha']))
+        ''', (int(row['ci']), row['nombres'], row['paterno'] + ' ' + row['materno'], row['fecha']))
 
+    # Hacer commit para guardar los cambios
     conn.commit()
+
+    # Cerrar cursor y conexión
+    cursor.close()
     conn.close()
 
-if __name__ == '__main__':
-    # Leer el archivo CSV
-    archivo_csv = 'ciudadanos.csv'
-    ciudadanos = pd.read_csv(archivo_csv, delimiter=';', names=['ci', 'nombre1', 'nombre2', 'paterno', 'mate', 'fecha'])
+# Leer el archivo CSV
+filename = 'ciudadanos.csv'
+data = pd.read_csv(filename, delimiter=';')
 
-    # Filtrar nombres y apellidos
-    ciudadanos_filtrados = filtrar_nombres_apellidos(ciudadanos)
+# Aplicar los métodos (filtros)
+data = filtrar_nombres_apellidos(data)
+data = filtrar_ci(data)
+data = unir_nombres(data)
+data = convertir_fecha(data)
 
-    # Unir nombres
-    ciudadanos_unidos = unir_nombres(ciudadanos_filtrados)
+# Mostrar datos antes de guardar
+print("Datos antes de guardar en la base de datos:")
+print(data.head())
 
-    # Convertir fecha
-    ciudadanos_con_fecha_convertida = convertir_fecha(ciudadanos_unidos)
+# Guardar en la base de datos MySQL
+guardar_en_mysql(data)
 
-    # Guardar en la base de datos
-    guardar_en_bd(ciudadanos_con_fecha_convertida)
-
-    print('Proceso completado. Datos guardados en la base de datos.')
+print("\nDatos guardados en la base de datos MySQL.")
