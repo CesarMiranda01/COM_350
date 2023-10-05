@@ -2,6 +2,7 @@ import pandas as pd
 import mysql.connector
 from datetime import datetime
 import os
+#para que se ejecute pandas lo installe en la terminal con pip install
 
 # Obtener la ruta absoluta del directorio actual
 current_directory = os.path.abspath(os.path.dirname(__file__))
