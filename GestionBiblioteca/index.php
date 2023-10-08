@@ -2,74 +2,57 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<script src="script/jquery-3.1.1.min.js"></script>
-  <script src="script/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styleslogin.css">
+	<link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/all.min.css">
 	<title></title>
 </head>
 <body >
 	<!-- Agrega el nuevo menú estático -->
-<nav id="menuSuperior">
-    <ul>
-        <li><a href="#">Contactanos</a></li>
-        <li><a href="#">Ayuda</a></li>
-        <li><a href="#">Asistencia</a></li>
-		<li><a href="#">gmail</a></li>
-    </ul>
-</nav>
-	<header>
-		<div>
-			<img src="imagenes/logo.png">
-		</div>
-		<ul id="menuCabecera">
-		<!-- sprint4 -->
-      <li><a href="#" onclick="clientes();" id="botonFavoritos">Clientes</a></li>
-      <li><a href="#" onclick="mostrarLibros();" id="botonFavoritos">Libros</a></li>
-      <li><a href="#" onclick="librosPrestados();" id="botonFavoritos">Prestados</a></li>
-      <li><a href="#" onclick="mostrarFavoritos();" id="botonFavoritos">Contar Libros</a></li>
-
-      <li><a href="#" onclick="mostrarLibros();" id="botonFavoritos">Prestamos</a></li>
-	  <!-- sprint4 -->
-	  <li><a href="#" onclick="pendientes();" id="botonFavoritos">Pendientes</a></li>
-      <li><a href="#" onclick="librosPrestados();" id="botonFavoritos">Cerrar Sesion</a></li>
-      <li><a href="#" onclick="mostrarFavoritos();" id="botonFavoritos">&nbsp</a></li>
+	<nav id="menuSuperior">
+		<ul>
+			<li><a href="#">Contactanos</a></li>
+			<li><a href="#">Ayuda</a></li>
+			<li><a href="#">Asistencia</a></li>
+			<li><a href="#">gmail</a></li>
 		</ul>
-	</header><br>
-	<?php 
-	session_start();
-	if (!(isset($_SESSION['ci']))) {
-		echo '<div id="formularioAutenticarse" >
+	</nav>
+	<header>
+		<div id="titulo-container">
+			<img src="imagenes/library.png">
+			<span id="titulo">Biblioteca</span>
+		</div>
+		<ul id="menu">
+			<li><a href="#" onclick="clientes();" >Home</a></li>
+			<li><a href="#" onclick="clientes();" >Registrarse</a></li>
+			<li><a href="#" onclick="cerrarsesion();" >IniciarSesion</a></li>
+			<li><a href="#" onclick="librosPrestados();">Ayuda</a></li>
+		</ul>
+	</header>
+	<nav id="container">
+
+	<div id="formularioAutenticarse" style="display: true;">
 		<form method="POST">
-			<h1>BIBLIOTECA</h1>
-			<h4>Autenticacion</h4>
-			<label>C.I: del usuario &nbsp&nbsp&nbsp:</label>
+			<h1>Autenticación</h1>
+			<label for="ci">C.I del usuario:</label>
 			<input type="text" name="ci" id="ci" required><br><br>
-			<label>Contraseña:</label><br>
+			<h5 id="cialert"></h5>
+			<label for="password">Contraseña:</label>
 			<input type="password" id="password" name="password" required><br><br>
-			<input type="hidden" name="">
+			<h5 id="passwordalert"></h5>
 			<input id="botonIngresar" type="button" name="ingresar" value="Ingresar" onclick="ingreso();">
 		</form>
-	</div>';
-	} else {
-		?>
-		<div class="marco">
+	</div>
 
-			<div id="contenedor">
-				<div id="contenedor1"></div>
-				<div id="contenedor2">
-				<div class="headTop">
-				<input class="barraBusqueda" type="text" id="buscador" placeholder="buscar....">
-				<button class="boton" onclick="enviarbusqueda()">Buscar</button>
-				<button class="boton" onclick="generarListaBusqueda()">Generar Lista de Busquedas</button>
-			</div>
-				</div>
-			</div>
-		</div>
-		<?php
-	}
-?>  
-<div id="foot">
-	<!-- <img style="width: 1330px;" src="imagenes/biblioteca.jpg"> -->
-</div>
+
+	</nav>
+	<nav id="foot">
+		<ul>
+			<li><i class="fa-brands fa-facebook"></i></li>
+			<li><i class="fa-brands fa-twitter"></i></li>
+			<li><i class="fa-brands fa-youtube"></i></li>
+			<li><i class="fa-solid fa-envelope-open"></i></li>
+		</ul>
+	</nav>
+	<script src="script/script.js"></script>
 </body>
 </html>

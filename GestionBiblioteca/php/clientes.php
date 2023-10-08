@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/styless.css"> <!-- Esta es la línea que se añade -->
 <?php
 // Aquí se incluye el archivo conexion.php
-include("connection.php");
+include("conexion.php");
 // Se hace una consulta a la tabla clientes
 $sql = "SELECT * FROM persona";
 // Se ejecuta la consulta y se guarda el resultado

@@ -1,13 +1,7 @@
 <?php
-	$link = 'mysql:host=localhost; dbname=gestionbiblioteca';
-	$user = 'root';
-	$password = '';
-	try{
-		$pdo = new PDO($link, $user, $password);
-		//$pdo = mysqli_connect("localhost", "root", "", "gestionbiblioteca");
-
-	} catch (PDOException $e) {
-		print "Error!!!!".$e->getMessage()."<br>";
-		die();
-	}
+// Conexión a la base de datos local
+$con = mysqli_connect("localhost", "root", "", "gestionbiblioteca");
+if ($con->connect_error){
+    die ("No se pudo conectar con el servidor".$con->connect_error);
+}
 ?>

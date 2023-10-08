@@ -2,10 +2,11 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="css/styless.css"> <!-- Esta es la línea que se añade -->
 </head>
 <body>
 	<?php 
-		include('conexion.php');
+		include('conexion1.php');
 		$consulta = $pdo->prepare("SELECT * FROM libro");
 	  	$consulta->execute();
 	  	echo "
@@ -31,7 +32,7 @@
 	  			<td>".$fila['idLibro']."</td>
 	  			<td>".$fila['titulo']."</td>
 	  			<td>".$fila['autor']."</td>
-	  			<td><a href='insertarFavorito.php?idlibro=".$fila['idLibro']."'><img src='imagenes/favorito.png'></a></td>
+	  			<td><a href='php/insertarFavorito.php?idLibro=".$fila['idLibro']."'><img src='imagenes/favorito.png'></a></td>
 	  			
 	  			</tr>";
 	  		}
