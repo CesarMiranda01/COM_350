@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-09-2023 a las 05:17:13
+-- Tiempo de generación: 08-10-2023 a las 17:53:48
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -76,18 +76,20 @@ CREATE TABLE `libro` (
   `edicion` char(50) NOT NULL,
   `autor` char(255) NOT NULL,
   `favorito` tinyint(4) NOT NULL,
-  `nombreBiblioteca` char(255) NOT NULL
+  `nombreBiblioteca` char(255) NOT NULL,
+  `prestado` tinyint(2) NOT NULL,
+  `codigo` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Volcado de datos para la tabla `libro`
 --
 
-INSERT INTO `libro` (`idLibro`, `titulo`, `editorial`, `edicion`, `autor`, `favorito`, `nombreBiblioteca`) VALUES
-(1, 'Cien años de soledad', 'Santillana', 'Segunda', 'Gabriel García Márquez', 0, 'Biblioteca Virtual'),
-(2, 'Un mundo feliz', 'Hoguera', 'Primera', 'Aldous Huxley', 0, 'Biblioteca Virtual'),
-(3, 'Pulgarsito', 'Don Bosco', 'cuarto', 'Jhon Milan', 1, 'Biblioteca Virtual'),
-(4, 'La noche fria', 'cherry', 'tercero', 'Francisco Paucar', 1, 'Biblioteca Virtual');
+INSERT INTO `libro` (`idLibro`, `titulo`, `editorial`, `edicion`, `autor`, `favorito`, `nombreBiblioteca`, `prestado`, `codigo`) VALUES
+(1, 'Cien años de soledad', 'Santillana', 'Segunda', 'Gabriel García Márquez', 0, 'Biblioteca Virtual', 1, 'xs123-34'),
+(2, 'Un mundo feliz', 'Hoguera', 'Primera', 'Aldous Huxley', 0, 'Biblioteca Virtual', 1, 'fg-235-sa'),
+(3, 'Pulgarsito', 'Don Bosco', 'cuarto', 'Jhon Milan', 1, 'Biblioteca Virtual', 0, 'fg-123-21'),
+(4, 'La noche fria', 'cherry', 'tercero', 'Francisco Paucar', 0, 'Biblioteca Virtual', 1, 'de-234-45');
 
 -- --------------------------------------------------------
 
@@ -108,7 +110,7 @@ CREATE TABLE `libroprestado` (
 --
 
 INSERT INTO `libroprestado` (`prestado`, `fechaPrestado`, `fechaEntrega`, `idLibro`, `ci`) VALUES
-(1, '2023-09-01', '2023-09-21', 1, 8529001),
+(1, '2023-09-01', '2023-09-21', 1, 8529209),
 (1, '2023-09-05', '2023-09-18', 2, 5632480),
 (1, '2023-09-03', '2023-09-15', 4, 8456234),
 (1, '2023-09-11', '2023-09-27', 3, 5632009);
@@ -124,7 +126,7 @@ CREATE TABLE `persona` (
   `nombres` char(255) NOT NULL,
   `apellidos` char(255) NOT NULL,
   `edad` int(2) NOT NULL,
-  `password` char(255) NOT NULL,
+  `contrasena` char(255) NOT NULL,
   `privilegio` int(5) NOT NULL,
   `email` char(255) NOT NULL,
   `nombreBiblioteca` char(255) NOT NULL
@@ -134,16 +136,16 @@ CREATE TABLE `persona` (
 -- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `persona` (`ci`, `nombres`, `apellidos`, `edad`, `password`, `privilegio`, `email`, `nombreBiblioteca`) VALUES
+INSERT INTO `persona` (`ci`, `nombres`, `apellidos`, `edad`, `contrasena`, `privilegio`, `email`, `nombreBiblioteca`) VALUES
 (5632009, 'Xavier', 'Medina', 20, '123', 3, 'xaviersitomedina222@gmail.com', 'Biblioteca Virtual'),
 (5632458, 'Alexander', 'Diaz', 21, '123', 1, 'alexddiazdiaz@gmail.com', 'Biblioteca Virtual'),
 (5632480, 'Alexa', 'Barron', 24, '123', 3, 'alexabarron123@gmail.com', 'Biblioteca Virtual'),
 (5637165, 'Gerson', 'Gutierrez', 32, '$2y$10$LDfDe.2WQpyZ/KeeuD1XT.TxSjsosL6ocAPaYwlrIgoftycuz67CK', 1, 'gutierrezmurillogerson@gmail.com', 'Biblioteca Virtual'),
 (5986324, 'Joel', 'Yucra Mamani', 25, '123', 2, 'mamanijoel444@gmail.com', 'Biblioteca Virtual'),
 (8456234, 'Juan', 'Perez', 21, '123', 3, 'perezjuan0001@gmail.com', 'Biblioteca Virtual'),
-(8529001, 'Alejandra', 'Padilla', 23, '123', 3, 'alejandra123@gmail.com', 'Biblioteca Virtual'),
-(8529207, 'Cesar', 'Miranda', 22, '$2y$10$LDfDe.2WQpyZ/KeeuD1XT.TxSjsosL6ocAPaYwlrIgoftycuz67CK', 1, 'miranda.gutierrez.cesaralvaro@usfx.bo', 'Biblioteca Virtual'),
-(8529208, 'Rodrigo', 'Molina', 22, '123', 1, 'molina.rodrigo@usfx.bo', 'Biblioteca Virtual');
+(8529207, 'Cesar', 'Miranda', 22, '123', 1, 'miranda.gutierrez.cesaralvaro@usfx.bo', 'Biblioteca Virtual'),
+(8529208, 'Rodrigo', 'Molina', 22, '123', 2, 'molina.rodrigo@usfx.bo', 'Biblioteca Virtual'),
+(8529209, 'Alejandra', 'Padilla', 23, '123', 3, 'alejandra123@gmail.com', 'Biblioteca Virtual');
 
 -- --------------------------------------------------------
 

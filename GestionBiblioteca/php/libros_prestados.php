@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="css/styless.css">
 <?php 
 		include('conexion1.php');
 		$consulta = $pdo->prepare("SELECT l.titulo, l.idLibro, l.autor, p.fechaPrestado, p.fechaEntrega, c.nombres FROM libro l INNER JOIN libroprestado p ON l.idlibro = p.idlibro INNER JOIN persona c ON p.ci = c.ci WHERE l.prestado = 1");
