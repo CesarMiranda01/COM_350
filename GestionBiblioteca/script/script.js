@@ -32,6 +32,7 @@ function ingreso() {
 	xhr.onreadystatechange = function() {
 	  // Si la petición se completó con éxito y el código de respuesta es 200
 	  if (xhr.readyState == 4 && xhr.status == 200) {
+		console.log(xhr.responseText); // Agrega esta línea para verificar la respuesta
 		// Obtener la respuesta del servidor en formato JSON
 		var respuesta = JSON.parse(xhr.responseText);
   
