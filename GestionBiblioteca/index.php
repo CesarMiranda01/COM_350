@@ -18,8 +18,8 @@
 	</nav>
 	<header>
 		<div id="titulo-container">
-			<img src="imagenes/library.png">
-			<span id="titulo">Biblioteca</span>
+			<img src="imagenes/logo.jpeg">
+			<span id="titulo">LIbros usfx</span>
 		</div>
 		<ul id="menu">
 			<li><a href="#" onclick="clientes();" >Home</a></li>

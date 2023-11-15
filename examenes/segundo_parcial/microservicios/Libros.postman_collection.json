@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "d498ea8c-d2b2-4561-bd85-554f8efd894f",
+		"name": "Libros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29589983",
+		"_collection_link": "https://dark-firefly-664699.postman.co/workspace/Microservicios2~05857478-220f-4f72-9658-99ca93619cba/collection/29589983-d498ea8c-d2b2-4561-bd85-554f8efd894f?action=share&source=collection_link&creator=29589983"
+	},
+	"item": [
+		{
+			"name": "Get libros",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Post libros",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Put libros",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete libros",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
